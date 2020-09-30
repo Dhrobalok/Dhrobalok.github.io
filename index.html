@@ -152,6 +152,7 @@ html
   background-color:#00ffff;
   margin-top: 20px;
   height:auto;
+  display: none;
 }
 
 #myDIV2 {
@@ -161,6 +162,7 @@ html
   background-color:#00ffff;
   margin-top: 20px;
   height:auto;
+  display: none;
 }
 
 #myDIV3{
@@ -170,6 +172,7 @@ html
   background-color:#00ffff;
   margin-top: 20px;
   height:auto;
+  display: none;
 }
 
 #myDIV4{
@@ -179,6 +182,7 @@ html
   background-color:#00ffff;
   margin-top: 20px;
   height:auto;
+  display: none;
 }
 
 
@@ -243,7 +247,7 @@ button span {
   
 
     <a class="active" href="#home">HOME</a>
-    <a class="active" href="#section2">SKILL</a>
+    <a class="active" href="#section2">DETAILS</a>
     <a class="active"href="#section3">CONTACT</a>
   </div>
 </div>
@@ -285,12 +289,12 @@ button span {
          
            <div class="main" id="section2">
             
-              <h4 style="font-weight: bold;font-size:2vw;font-style:italic;">SKILL</h4>
+              <h4 style="font-weight: bold;font-size:2vw;font-style:italic;">SKILL & DETAILS</h4>
               
-               
+               <br><br>
                   
                  
-                   <button class="button button4"  onclick="myFunction()" style="font-size: 20px;font-style: italic;"><span>Language</span></button>
+                   <button class="button button4" type="button" onclick="myFunction()" style="font-size: 20px;"><span>Language</span></button>
                
              <div id="myDIV" class="card">        
                 <ul>
@@ -306,7 +310,7 @@ button span {
              <!-- second link -->
         
          
-            <button class="button button4"  onclick="myFunction2()" style="font-size: 20px;font-style: italic;"><span>Front&BackEnd</span></button>
+            <button class="button button4" type="button"  onclick="myFunction2()" style="font-size: 20px;font-style: italic;"><span>Front&BackEnd</span></button>
          
           
               <div id="myDIV2" class="card">        
@@ -326,7 +330,7 @@ button span {
         <!--third link-->
                 
           
-            <button class="button button4"  onclick="myFunction3()" style="font-size: 20px;font-style: italic;"><span>Academic project</span></button>
+            <button class="button button4" type="button" onclick="myFunction3()" style="font-size: 20px;font-style: italic;"aria-expanded="false"><span>Academic project</span></button>
             
           
               <div id="myDIV3" class="card">        
@@ -342,12 +346,12 @@ button span {
 
     <!--  4th link -->
 
-     <button class="button button4"  onclick="myFunction4()" style="font-size: 20px;font-style: italic;"><span>Academic details</span></button>
+     <button class="button button4" type="button" onclick="myFunction4()" style="font-size: 20px;font-style: italic;"><span>Academic details</span></button>
             
           
               <div id="myDIV4" class="card">        
                 <ul>
-                 <li><a href="https://github.com/Dhrobalok/project">laravel Project</a></li>
+                 <li></li>
                
                </ul>
               </div>        
@@ -424,17 +428,23 @@ button span {
 
 
 <script>
-function myFunction() {
+function myFunction() 
+{
   var x = document.getElementById("myDIV");
-  if (x.style.display === "none") {
+
+  if (x.style.display === "none") 
+  {
     x.style.display = "block";
-  } else {
+  } 
+  else
+   {
     x.style.display = "none";
   }
 }
 
 
-function myFunction2() {
+function myFunction2()
+ {
   var x = document.getElementById("myDIV2");
   if (x.style.display === "none") {
     x.style.display = "block";
@@ -443,7 +453,8 @@ function myFunction2() {
   }
 }
 
-function myFunction3() {
+function myFunction3() 
+{
   var x = document.getElementById("myDIV3");
   if (x.style.display === "none") {
     x.style.display = "block";
@@ -452,7 +463,8 @@ function myFunction3() {
   }
 }
 
-function myFunction4() {
+function myFunction4()
+ {
   var x = document.getElementById("myDIV4");
   if (x.style.display === "none") {
     x.style.display = "block";
