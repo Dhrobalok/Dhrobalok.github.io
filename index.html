@@ -2,14 +2,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Login Page</title>
+  <title>My portfolio</title>
 
 <style type="text/css">
   
@@ -36,21 +38,22 @@
   border-radius: 2px;
    }
 
-  .card
-  {
-    width: 530px;
-    height: 320px;
-    
+.card
+{
 
-   background-repeat: no-repeat;
+    width: 730px;
+    height: 450px;
+    background-repeat: no-repeat;
    background-size: cover;
-  }
+}
+
+
   .card-body
   {
-       width: 530px;
-    height: 220px;
+       width: 730px;
+       height: 220px;
     
-  background-color: black;
+      background-color: black;
    background-repeat: no-repeat;
    background-size: cover;
 
@@ -115,33 +118,133 @@ a:hover
     float: none;
   }
 }
+
+a.active:hover, a.ex2:active {font-size: 150%;color: white;}
+.ex2
+{
+  color: white;
+}
+
+html
+{
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 500px) {
+   footer {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+
+}
+
+.vl {
+  border-right: 6px solid green;
+  height: 500px;
+}
+
+#myDIV {
+  width:155px;
+  padding:15px;
+  text-align: center;
+  background-color:#00ffff;
+  margin-top: 20px;
+  height:auto;
+}
+
+#myDIV2 {
+  width:155px;
+  padding:15px;
+  text-align: center;
+  background-color:#00ffff;
+  margin-top: 20px;
+  height:auto;
+}
+
+#myDIV3{
+  width:155px;
+  padding:15px;
+  text-align: center;
+  background-color:#00ffff;
+  margin-top: 20px;
+  height:auto;
+}
+
+#myDIV4{
+  width:155px;
+  padding:15px;
+  text-align: center;
+  background-color:#00ffff;
+  margin-top: 20px;
+  height:auto;
+}
+
+
+.button4 {
+  border-radius: 4px;
+  background-color:none;
+  border: none;
+  color:none;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button4 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button4:hover span {
+  padding-right: 25px;
+}
+
+.button4:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#skill
+{
+  height: auto;
+
+}
 </style>
 
 </head>
 <body>
    
        
-<!--
-            <div class="panel panel-body col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding pull-left">
-                <a  href="#" ><span style="color:#F0FFF0;font-style: italic;font-weight: bold;">ABOUT</span></a>
-                 
-                </div>
 
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding pull-left">
-                <a  href="#" ><span style="color:#F0FFF0;font-style: italic;font-weight: bold;">ABOUT</span></a>
-                 
-                </div>
-
-      
-          </div>
-        -->
        <div class="header">
  
   <div class="header-right">
+           
+
+  
+  <a href="#section2"></a>
+  
+
     <a class="active" href="#home">HOME</a>
-    <a class="active" href="#contact">SKILL</a>
-    <a class="active"href="#about">CONTACT</a>
+    <a class="active" href="#section2">SKILL</a>
+    <a class="active"href="#section3">CONTACT</a>
   </div>
 </div>
       
@@ -156,26 +259,206 @@ a:hover
             <div class="card-body">
 
 
-              <img src="39839795.jpeg"  style="width:200px;margin-left: 135px;">
+              <img src="39839795.jpeg"  style="width:200px;margin-left: 235px;">
 
 
             </div>
          
 
-           
+          
             <div class="card">
-              <p style="font-style:italic;padding-top: 35px;font-weight:bold;margin-left: 12px;line-height: 2.6;"><span style="margin-left: 135px;color: blue;">Hi,this is Rashedul Islam</span><br><br><span style="padding:2px;">I have been studying web development since 2016 and developing application Laravel, php and though I love to use Laravel. I am skilled and solution focused web developer with extensive experience for developing a web application.I love also solving problem. </span></p>
+             
+              <p id="card" style="font-style:italic;padding-top: 35px;font-weight:bold;margin-left: 12px;line-height: 2.6;"><span style="margin-left: 235px;color: blue;">Hi,this is Rashedul Islam</span><br><br><span style="padding:2px;">I have been studying web development since 2016 and developing application Laravel, php and though I love to use Laravel. I am skilled and solution focused web developer with extensive experience for developing a web application.I love also solving problem.I complete my B.sc in computer science and engineering from pabna university of science and technology.</span></p>
+
+             
               
-            </div>
+            
+           </div> 
   
+           
+       <!--  skill page -->
+
+
+        
+      <div class="card" id="skill">
+            
+         
+           <div class="main" id="section2">
+            
+              <h4 style="font-weight: bold;font-size:2vw;font-style:italic;">SKILL</h4>
+              
+               
+                  
+                 
+                   <button class="button button4"  onclick="myFunction()" style="font-size: 20px;font-style: italic;"><span>Language</span></button>
+               
+             <div id="myDIV" class="card">        
+                <ul>
+                 <li>C</li>
+                <li>C++</li>
+                <li>JAVA</li>
+                 <li>Shell(basic)</li>
+               </ul>
+              </div>             
+               
+    
+
+             <!-- second link -->
+        
+         
+            <button class="button button4"  onclick="myFunction2()" style="font-size: 20px;font-style: italic;"><span>Front&BackEnd</span></button>
+         
+          
+              <div id="myDIV2" class="card">        
+                <ul>
+                 <li>Database(MySQL)</li>
+                <li>JavaScript</li>
+                <li>Laravel</li>
+                 <li>React js</li>
+                  <li>Git</li>
+                    <li>PHP</li>
+               </ul>
+              </div>             
+             
+       
+        <!-- second link end-->
+
+        <!--third link-->
+                
+          
+            <button class="button button4"  onclick="myFunction3()" style="font-size: 20px;font-style: italic;"><span>Academic project</span></button>
+            
+          
+              <div id="myDIV3" class="card">        
+                <ul>
+                 <li><a href="https://github.com/Dhrobalok/project">laravel Project</a></li>
+               
+               </ul>
+              </div>        
+
+
+        <!--third link end-->
+
+
+    <!--  4th link -->
+
+     <button class="button button4"  onclick="myFunction4()" style="font-size: 20px;font-style: italic;"><span>Academic details</span></button>
+            
+          
+              <div id="myDIV4" class="card">        
+                <ul>
+                 <li><a href="https://github.com/Dhrobalok/project">laravel Project</a></li>
+               
+               </ul>
+              </div>        
+
+    <!--  4th link end-->
+            
+           
+        </div>
+   
+   </div>
+
+      <!--  skill page end -->
+
+
+
+      <!--contact page  -->
+
+             <div class="card">
+              <div class="main" id="section3">
+                
+                <h4 style="font-weight: bold;font-size:2vw;font-style:italic;padding: 25px;">contact me</h4>
+
+               
+
+                  <i style="font-size:20px;color:black; padding: 25px;" class="fa">&#xf0e0;&nbsp&nbsp<br>
+                    <span style="font-size: 20px;padding: 25">rashedcse447@gmail.com</span></i>
+
+                    <br>
+
+                    <i style="font-size:25px;padding: 25px;" class="fa">&#xf095;<br>01765389556</i>
+
+
+              </div>
+               
+
+             </div>
+
+
+       <!--contact page end -->
+      
+<!-- social link  -->
+
+<footer >
+
+        <div class=" col-md-9">
+           <a href="https://github.com/Dhrobalok"><i style="font-size:20px;color:#ff9999;line-height: 8;" class="fa">&#xf09b;github</i></a>&nbsp&nbsp
+
+         
+
+
+
+         
+        </div>
+         
 
       
+
+        
+</footer>
+  <!--social link  end -->
           </div>
             
       </div>
 
   </div>
+           
+      </div>
 
+  </div>
 
 </body>
 </html>
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
+function myFunction2() {
+  var x = document.getElementById("myDIV2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction3() {
+  var x = document.getElementById("myDIV3");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction4() {
+  var x = document.getElementById("myDIV4");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
