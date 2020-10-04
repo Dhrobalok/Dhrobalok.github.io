@@ -1,9 +1,14 @@
 
+ 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
   <meta charset="UTF-8">
+  <meta name="description" content="Full stack web developer">
+  <meta name="keywords" content="programer,web developer,Full stack web developer,Bangladesh">
+  <meta name="author" content="Dhrobalok">
  
  <link rel="stylesheet" type="text/css" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,8 +35,50 @@
   margin-right:auto;
   background-size: cover;
   border-radius: 2px;
+
+  animation: fadeInAnimation ease 3s ;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
   
    }
+
+   @keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     } 
+} 
+
+
+
+  #name
+  {
+    text-shadow: 1px 1px;
+  /*animation-name: mymove;*/
+  animation-duration: 5s;
+  margin-top: 115px;
+  
+}
+/*
+@keyframes mymove
+ {
+  from {left: 0px;}
+  to {left: 50px;}
+}
+  */  
+   
+  
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+
+/* typing element */
+
 
 </style>
 
@@ -64,10 +111,28 @@
 
 
             <div class="card-body">
+             <div class="column" id="name" >
+                 
+                <div style="font-style: italic;display:table-cell;font-size: 25px;vertical-align:middle;">
+                    <p>
+                       <a href="" style="color:#555555;" class="typewrite" data-period="2000" data-type='[ "Hi, this is Rashed.", "I am full stack web developer.", "I Love Design.", "I Love to Develop.","I enjoy solving problem" ]'>
+                         <span class="wrap"></span>
+                         </a>
 
+                    </p>
+                  
+                </div>
+              
+             </div>
+     
+    
 
-              <img src="39839795.jpeg"  style="width:200px;margin-left: 235px;">
+              <div class="column">
+              <img src="39839795.jpeg"  style="width:200px;">
+            </div>
 
+              
+            
 
             </div>
          
@@ -75,7 +140,7 @@
           
             <div class="card">
              
-              <p id="card" style="font-style:italic;padding-top: 35px;font-weight:bold;margin-left: 12px;line-height: 2.6;"><span style="margin-left: 235px;color: blue;">Hi,this is Rashedul Islam</span><br><br><span style="padding:2px;">I have been studying web development since 2016 and developing application Laravel, php and though I love to use Laravel. I am skilled and solution focused web developer with extensive experience for developing a web application.I love also solving problem.I complete my B.sc in computer science and engineering from pabna university of science and technology.</span></p>
+              <p id="card" style="font-style:italic;padding-top: 35px;font-weight:bold;margin-left: 12px;line-height: 2.6;"><br><br><span style="padding:2px;">I have been studying web development since 2016 and developing application Laravel, php and though I love to use Laravel. I am skilled and solution focused web developer with extensive experience for developing a web application.I love also solving problem.I complete my B.sc in computer science and engineering from pabna university of science and technology.</span></p>
 
              
               
@@ -245,6 +310,9 @@
 
   </div>
 
+
+
+
 </body>
 </html>
 
@@ -306,5 +374,66 @@ function myFunction5()
     x.style.display = "none";
   }
 }
+
+
 </script>
 
+<script>
+  
+  var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em }";
+        document.body.appendChild(css);
+    };
+</script>
